@@ -11,6 +11,8 @@
 		CEA8D5F82A6C460900FA6B88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8D5F72A6C460900FA6B88 /* ContentView.swift */; };
 		CEA8D5FA2A6C460900FA6B88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA8D5F92A6C460900FA6B88 /* Assets.xcassets */; };
 		CEA8D5FD2A6C460900FA6B88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA8D5FC2A6C460900FA6B88 /* Preview Assets.xcassets */; };
+		CEA8D6052A6C481900FA6B88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA8D6042A6C481900FA6B88 /* GoogleService-Info.plist */; };
+		CEA8D6082A6C4ED700FA6B88 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = CEA8D6072A6C4ED700FA6B88 /* Algorithms */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		CEA8D5F72A6C460900FA6B88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CEA8D5F92A6C460900FA6B88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA8D5FC2A6C460900FA6B88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEA8D6032A6C461100FA6B88 /* pv.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pv.entitlements; sourceTree = "<group>"; };
+		CEA8D6042A6C481900FA6B88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA8D6082A6C4ED700FA6B88 /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +56,10 @@
 		CEA8D5F42A6C460900FA6B88 /* pv */ = {
 			isa = PBXGroup;
 			children = (
+				CEA8D6032A6C461100FA6B88 /* pv.entitlements */,
 				CEA8D5F52A6C460900FA6B88 /* pvApp.swift */,
 				CEA8D5F72A6C460900FA6B88 /* ContentView.swift */,
+				CEA8D6042A6C481900FA6B88 /* GoogleService-Info.plist */,
 				CEA8D5F92A6C460900FA6B88 /* Assets.xcassets */,
 				CEA8D5FB2A6C460900FA6B88 /* Preview Content */,
 			);
@@ -83,6 +90,9 @@
 			dependencies = (
 			);
 			name = pv;
+			packageProductDependencies = (
+				CEA8D6072A6C4ED700FA6B88 /* Algorithms */,
+			);
 			productName = pv;
 			productReference = CEA8D5F22A6C460900FA6B88 /* pv.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +121,9 @@
 				Base,
 			);
 			mainGroup = CEA8D5E92A6C460900FA6B88;
+			packageReferences = (
+				CEA8D6062A6C4ED700FA6B88 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = CEA8D5F32A6C460900FA6B88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +140,7 @@
 			files = (
 				CEA8D5FD2A6C460900FA6B88 /* Preview Assets.xcassets in Resources */,
 				CEA8D5FA2A6C460900FA6B88 /* Assets.xcassets in Resources */,
+				CEA8D6052A6C481900FA6B88 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = pv/pv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pv/Preview Content\"";
@@ -282,6 +297,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.eliat.pv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = pv/pv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pv/Preview Content\"";
@@ -311,6 +330,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.eliat.pv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEA8D6062A6C4ED700FA6B88 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEA8D6072A6C4ED700FA6B88 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEA8D6062A6C4ED700FA6B88 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEA8D5EA2A6C460900FA6B88 /* Project object */;
 }
